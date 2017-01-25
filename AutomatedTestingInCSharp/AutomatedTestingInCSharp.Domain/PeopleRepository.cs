@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace IntegrationTestWithDataBaseOnMemory.Domain
+namespace AutomatedTestingInCSharp.Domain
 {
     public interface PeopleRepository
     {

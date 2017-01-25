@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{49B26F10-FB64-45F9-9038-3ED77B4D8DBB}</ProjectGuid>
+    <ProjectGuid>{B3BE2295-B360-453C-91ED-88092A592B62}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>IntegrationTestWithDataBaseOnMemory.Domain</RootNamespace>
-    <AssemblyName>IntegrationTestWithDataBaseOnMemory.Domain</AssemblyName>
+    <RootNamespace>AutomatedTestingInCSharp.Application</RootNamespace>
+    <AssemblyName>AutomatedTestingInCSharp.Application</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,9 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PeopleRepository.cs" />
-    <Compile Include="Person.cs" />
+    <Compile Include="AddPersonApplicationService.cs" />
+    <Compile Include="AddPersonDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AutomatedTestingInCSharp.Domain\AutomatedTestingInCSharp.Domain.csproj">
+      <Project>{310718be-96af-4863-a0c8-3eb56e769a2c}</Project>
+      <Name>AutomatedTestingInCSharp.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

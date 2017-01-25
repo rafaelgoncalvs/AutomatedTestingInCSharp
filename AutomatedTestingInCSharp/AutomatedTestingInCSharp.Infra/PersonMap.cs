@@ -1,7 +1,7 @@
-﻿using FluentNHibernate.Mapping;
-using IntegrationTestWithDataBaseOnMemory.Domain;
+﻿using AutomatedTestingInCSharp.Domain;
+using FluentNHibernate.Mapping;
 
-namespace IntegrationTestWithDataBaseOnMemory.Infra
+namespace AutomatedTestingInCSharp.Infra
 {
     public class PersonMap : ClassMap<Person>
     {

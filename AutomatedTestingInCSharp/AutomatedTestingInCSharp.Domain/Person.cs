@@ -1,4 +1,4 @@
-﻿namespace IntegrationTestWithDataBaseOnMemory.Domain
+﻿namespace AutomatedTestingInCSharp.Domain
 {
     public class Person
     {

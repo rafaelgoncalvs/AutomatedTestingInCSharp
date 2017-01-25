@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("IntegrationTestWithDataBaseOnMemory.Domain")]
+[assembly: AssemblyTitle("AutomatedTestingInCSharp.Domain")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("IntegrationTestWithDataBaseOnMemory.Domain")]
+[assembly: AssemblyProduct("AutomatedTestingInCSharp.Domain")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("49b26f10-fb64-45f9-9038-3ed77b4d8dbb")]
+[assembly: Guid("310718be-96af-4863-a0c8-3eb56e769a2c")]
 
 // Version information for an assembly consists of the following four values:
 //

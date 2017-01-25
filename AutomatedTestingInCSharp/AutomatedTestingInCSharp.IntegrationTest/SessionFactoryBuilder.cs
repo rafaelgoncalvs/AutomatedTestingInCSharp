@@ -1,11 +1,10 @@
-﻿using FluentNHibernate.Cfg;
+﻿using AutomatedTestingInCSharp.Infra;
+using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
-using IntegrationTestWithDataBaseOnMemory.Domain;
-using IntegrationTestWithDataBaseOnMemory.Infra;
 using NHibernate;
 using NHibernate.Cfg;
 
-namespace IntegrationTestWithDataBaseOnMemory.IntegrationTest
+namespace AutomatedTestingInCSharp.IntegrationTest
 {
     public class SessionFactoryBuilder
     {

@@ -1,12 +1,12 @@
-﻿using IntegrationTestWithDataBaseOnMemory.Application;
-using IntegrationTestWithDataBaseOnMemory.Infra;
+﻿using AutomatedTestingInCSharp.Application;
+using AutomatedTestingInCSharp.Infra;
 using NHibernate;
 using NHibernate.Cfg;
 using NHibernate.Tool.hbm2ddl;
 using NUnit.Framework;
 using SimpleInjector;
 
-namespace IntegrationTestWithDataBaseOnMemory.IntegrationTest
+namespace AutomatedTestingInCSharp.IntegrationTest
 {
     [TestFixture]
     public abstract class TestBase

@@ -1,4 +1,4 @@
-﻿namespace IntegrationTestWithDataBaseOnMemory
+﻿namespace AutomatedTestingInCSharp.Application
 {
     public class AddPersonDto
     {

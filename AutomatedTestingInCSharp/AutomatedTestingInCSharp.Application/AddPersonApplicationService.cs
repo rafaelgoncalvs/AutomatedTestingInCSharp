@@ -1,6 +1,6 @@
-﻿using IntegrationTestWithDataBaseOnMemory.Domain;
+﻿using AutomatedTestingInCSharp.Domain;
 
-namespace IntegrationTestWithDataBaseOnMemory.Application
+namespace AutomatedTestingInCSharp.Application
 {
     public class AddPersonApplicationService
     {

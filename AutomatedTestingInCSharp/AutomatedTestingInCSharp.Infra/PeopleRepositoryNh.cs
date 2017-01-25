@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using System.Linq;
-using IntegrationTestWithDataBaseOnMemory.Domain;
+using AutomatedTestingInCSharp.Domain;
 using NHibernate;
 using NHibernate.Linq;
 
-namespace IntegrationTestWithDataBaseOnMemory.Infra
+namespace AutomatedTestingInCSharp.Infra
 {
     public class PeopleRepositoryNh : PeopleRepository
     {

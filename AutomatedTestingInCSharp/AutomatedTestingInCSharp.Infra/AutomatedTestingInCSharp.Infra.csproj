@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{577BD742-E504-4C79-91F9-1B6BD024B3CD}</ProjectGuid>
+    <ProjectGuid>{5740EAC3-61CA-4782-95BA-F931C277B4EC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>IntegrationTestWithDataBaseOnMemory.Application</RootNamespace>
-    <AssemblyName>IntegrationTestWithDataBaseOnMemory.Application</AssemblyName>
+    <RootNamespace>AutomatedTestingInCSharp.Infra</RootNamespace>
+    <AssemblyName>AutomatedTestingInCSharp.Infra</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,6 +30,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FluentNHibernate, Version=2.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentNHibernate.2.0.3.0\lib\net40\FluentNHibernate.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=4.0.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Iesi.Collections.4.0.0.4000\lib\net40\Iesi.Collections.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHibernate.4.0.0.4000\lib\net40\NHibernate.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,15 +52,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddPersonApplicationService.cs" />
-    <Compile Include="AddPersonDto.cs" />
+    <Compile Include="PeopleRepositoryNh.cs" />
+    <Compile Include="PersonMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\IntegrationTestWithDataBaseOnMemory.Domain\IntegrationTestWithDataBaseOnMemory.Domain.csproj">
-      <Project>{49b26f10-fb64-45f9-9038-3ed77b4d8dbb}</Project>
-      <Name>IntegrationTestWithDataBaseOnMemory.Domain</Name>
+    <ProjectReference Include="..\AutomatedTestingInCSharp.Application\AutomatedTestingInCSharp.Application.csproj">
+      <Project>{b3be2295-b360-453c-91ed-88092a592b62}</Project>
+      <Name>AutomatedTestingInCSharp.Application</Name>
     </ProjectReference>
+    <ProjectReference Include="..\AutomatedTestingInCSharp.Domain\AutomatedTestingInCSharp.Domain.csproj">
+      <Project>{310718be-96af-4863-a0c8-3eb56e769a2c}</Project>
+      <Name>AutomatedTestingInCSharp.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

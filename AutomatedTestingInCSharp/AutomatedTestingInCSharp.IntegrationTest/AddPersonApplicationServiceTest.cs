@@ -1,9 +1,9 @@
 ﻿using System.Linq;
-using IntegrationTestWithDataBaseOnMemory.Application;
-using IntegrationTestWithDataBaseOnMemory.Domain;
+using AutomatedTestingInCSharp.Application;
+using AutomatedTestingInCSharp.Domain;
 using NUnit.Framework;
 
-namespace IntegrationTestWithDataBaseOnMemory.IntegrationTest
+namespace AutomatedTestingInCSharp.IntegrationTest
 {
     [TestFixture]
     public class AddPersonApplicationServiceTest : TestBase
