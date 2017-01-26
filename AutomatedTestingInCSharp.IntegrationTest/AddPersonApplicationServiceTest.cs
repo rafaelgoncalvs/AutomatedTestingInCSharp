@@ -6,7 +6,7 @@ using NUnit.Framework;
 namespace AutomatedTestingInCSharp.IntegrationTest
 {
     [TestFixture]
-    public class AddPersonApplicationServiceTest : TestBase
+    public class AddPersonApplicationServiceTest : IntegrationTestBase
     {
         private AddPersonApplicationService _addPersonApplicationSercice;
         private PeopleRepository _peopleRepository;

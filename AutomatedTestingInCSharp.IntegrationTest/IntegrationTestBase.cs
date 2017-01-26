@@ -9,7 +9,7 @@ using SimpleInjector;
 namespace AutomatedTestingInCSharp.IntegrationTest
 {
     [TestFixture]
-    public abstract class TestBase
+    public abstract class IntegrationTestBase
     {
         private Container _container;
         private ITransaction _transacao;

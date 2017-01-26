@@ -10,7 +10,7 @@ namespace AutomatedTestingInCSharp.Application
         {
             _peopleRepository = peopleRepository;
         }
-
+        
         public void Add(AddPersonDto addPersonDto)
         {
             var pessoa = new Person(addPersonDto.Name, addPersonDto.Email);
