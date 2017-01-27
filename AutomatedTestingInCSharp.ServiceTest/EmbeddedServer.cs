@@ -1,23 +1,26 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Controllers;
 using System.Web.Http.Dispatcher;
 using AutomatedTestingInCSharp.WebApi;
 using Microsoft.Owin.Testing;
 using Owin;
-using SimpleInjector;
 
 namespace AutomatedTestingInCSharp.ServiceTest
 {
     public class EmbeddedServer
     {
-        private readonly Container _dependencyInjectionContainer;
+        private readonly IEnumerable<object> _controllers;
         private readonly string _adressBase;
 
         public TestServer Server { get; private set; }
 
-        public EmbeddedServer(Container dependencyInjectionContainer, string adressBase = "http://localhost:1984")
+        public EmbeddedServer(IEnumerable<object> controllers, string adressBase = "http://localhost:1984")
         {
-            _dependencyInjectionContainer = dependencyInjectionContainer;
+            _controllers = controllers;
             _adressBase = adressBase;
         }
 
@@ -27,7 +30,7 @@ namespace AutomatedTestingInCSharp.ServiceTest
             {
                 var config = new HttpConfiguration();
                 config.MapHttpAttributeRoutes();
-                config.Services.Replace(typeof(IHttpControllerActivator), new SimpleInjectorControllerActivator(_dependencyInjectionContainer));
+                config.Services.Replace(typeof(IHttpControllerActivator), new SimpleInjectorControllerActivator(_controllers));
                 
                 /* TODO: Outra opcao de configuracao
                  * using Autofac;

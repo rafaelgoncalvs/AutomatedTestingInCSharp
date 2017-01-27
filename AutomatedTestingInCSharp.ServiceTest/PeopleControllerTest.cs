@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Net;
 using AutomatedTestingInCSharp.Application;
+using AutomatedTestingInCSharp.WebApi;
 using NUnit.Framework;
-using SimpleInjector;
 
 namespace AutomatedTestingInCSharp.ServiceTest
 {
@@ -12,16 +11,17 @@ namespace AutomatedTestingInCSharp.ServiceTest
     {
         private AddPersonApplicationService _addPersonApplicationService;
 
-        public override void RegisterApplicationService(Container dependencyInjectionContainer)
+        public override IEnumerable<object> GetControllersForRegistering()
         {
-            dependencyInjectionContainer.Register(() => new AddPersonApplicationService(null));
-            _addPersonApplicationService = dependencyInjectionContainer.GetInstance<AddPersonApplicationService>();
+            
+            _addPersonApplicationService = new AddPersonApplicationService(null);
+            return new[] { new PeopleController(_addPersonApplicationService) };
         }
 
         [Test]
         public void Should_get_people()
         {
-            var response = HttpClient.GetAsync("http://localhost:1984/people").Result;
+            var response = HttpClient.GetAsync($"{AdressBase}/people").Result;
 
             Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
         }

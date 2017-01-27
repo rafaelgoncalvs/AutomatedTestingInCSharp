@@ -1,11 +1,6 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
-using AutomatedTestingInCSharp.Application;
-using AutomatedTestingInCSharp.Domain;
 using NUnit.Framework;
-using SimpleInjector;
 
 namespace AutomatedTestingInCSharp.ServiceTest
 {
@@ -19,16 +14,15 @@ namespace AutomatedTestingInCSharp.ServiceTest
         [SetUp]
         public void SetUp()
         {
-            var dependencyInjectionContainer = new Container();
-            RegisterApplicationService(dependencyInjectionContainer);
+            var controllers = GetControllersForRegistering();
             
-            _embeddedServer = new EmbeddedServer(dependencyInjectionContainer, AdressBase);
+            _embeddedServer = new EmbeddedServer(controllers, AdressBase);
             _embeddedServer.Start();
 
             HttpClient = _embeddedServer.Server.HttpClient;
         }
 
-        public abstract void RegisterApplicationService(Container dependencyInjectionContainer);
+        public abstract IEnumerable<object> GetControllersForRegistering();
         
         [TearDown]
         public void TearDown()
