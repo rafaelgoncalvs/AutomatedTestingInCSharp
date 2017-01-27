@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using AutomatedTestingInCSharp.Application;
 using AutomatedTestingInCSharp.Domain;
+using AutomatedTestingInCSharp.IntegrationTest.Base;
 using AutomatedTestingInCSharp.UnitTest;
 using NUnit.Framework;
 

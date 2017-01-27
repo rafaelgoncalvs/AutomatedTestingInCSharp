@@ -2,7 +2,7 @@
 using System.Linq;
 using SimpleInjector;
 
-namespace AutomatedTestingInCSharp.IntegrationTest
+namespace AutomatedTestingInCSharp.IntegrationTest.Base
 {
     internal static class SimpleInjectorExtensions
     {

@@ -5,6 +5,7 @@ using System.Net.Http;
 using System.Text;
 using AutomatedTestingInCSharp.Application;
 using AutomatedTestingInCSharp.Domain;
+using AutomatedTestingInCSharp.ServiceTest.Base;
 using AutomatedTestingInCSharp.WebApi;
 using Moq;
 using Newtonsoft.Json;

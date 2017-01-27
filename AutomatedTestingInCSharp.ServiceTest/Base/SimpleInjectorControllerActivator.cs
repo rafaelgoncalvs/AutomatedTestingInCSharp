@@ -5,7 +5,7 @@ using System.Net.Http;
 using System.Web.Http.Controllers;
 using System.Web.Http.Dispatcher;
 
-namespace AutomatedTestingInCSharp.ServiceTest
+namespace AutomatedTestingInCSharp.ServiceTest.Base
 {
     public class SimpleInjectorControllerActivator : IHttpControllerActivator
     {

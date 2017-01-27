@@ -6,7 +6,7 @@ using NHibernate.Tool.hbm2ddl;
 using NUnit.Framework;
 using SimpleInjector;
 
-namespace AutomatedTestingInCSharp.IntegrationTest
+namespace AutomatedTestingInCSharp.IntegrationTest.Base
 {
     [TestFixture]
     public abstract class IntegrationTestBase

@@ -1,15 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
 using System.Web.Http;
-using System.Web.Http.Controllers;
 using System.Web.Http.Dispatcher;
-using AutomatedTestingInCSharp.WebApi;
 using Microsoft.Owin.Testing;
 using Owin;
 
-namespace AutomatedTestingInCSharp.ServiceTest
+namespace AutomatedTestingInCSharp.ServiceTest.Base
 {
     public class EmbeddedServer
     {

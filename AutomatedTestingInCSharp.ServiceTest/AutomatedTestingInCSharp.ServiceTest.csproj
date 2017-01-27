@@ -112,11 +112,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EmbeddedServer.cs" />
+    <Compile Include="Base\EmbeddedServer.cs" />
+    <Compile Include="Base\ServiceTestBase.cs" />
+    <Compile Include="Base\SimpleInjectorControllerActivator.cs" />
     <Compile Include="PeopleControllerTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ServiceTestBase.cs" />
-    <Compile Include="SimpleInjectorControllerActivator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

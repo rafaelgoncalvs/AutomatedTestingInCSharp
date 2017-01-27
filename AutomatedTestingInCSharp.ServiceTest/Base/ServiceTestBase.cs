@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Net.Http;
 using NUnit.Framework;
 
-namespace AutomatedTestingInCSharp.ServiceTest
+namespace AutomatedTestingInCSharp.ServiceTest.Base
 {
     [TestFixture]
     public abstract class ServiceTestBase

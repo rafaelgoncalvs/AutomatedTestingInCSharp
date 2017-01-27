@@ -84,11 +84,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddPersonApplicationServiceTest.cs" />
+    <Compile Include="Base\IntegrationTestBase.cs" />
+    <Compile Include="Base\SessionFactoryBuilder.cs" />
+    <Compile Include="Base\SimpleInjectorExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SearchPeopleApplicationServiceTest.cs" />
-    <Compile Include="SessionFactoryBuilder.cs" />
-    <Compile Include="SimpleInjectorExtensions.cs" />
-    <Compile Include="IntegrationTestBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AutomatedTestingInCSharp.Application\AutomatedTestingInCSharp.Application.csproj">

@@ -4,7 +4,7 @@ using FluentNHibernate.Cfg.Db;
 using NHibernate;
 using NHibernate.Cfg;
 
-namespace AutomatedTestingInCSharp.IntegrationTest
+namespace AutomatedTestingInCSharp.IntegrationTest.Base
 {
     public class SessionFactoryBuilder
     {
