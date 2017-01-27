@@ -8,23 +8,36 @@ namespace AutomatedTestingInCSharp.WebApi
     {
         private readonly AddPersonApplicationService _addPersonApplicationService;
 
-        public PeopleController(AddPersonApplicationService addPersonApplicationService)
+        private readonly SearchPeopleApplicationService _searchPeopleApplicationService;
+
+        public PeopleController(AddPersonApplicationService addPersonApplicationService, SearchPeopleApplicationService searchPeopleApplicationService)
         {
             _addPersonApplicationService = addPersonApplicationService;
+            _searchPeopleApplicationService = searchPeopleApplicationService;
         }
 
         [HttpGet, Route("")]
         public IHttpActionResult Get()
         {
-            var peopleDto = new[] { new PersonDto() { Id = 1, Name = "Tefsdf", Email = "dfsdfsd"} };
+            var peopleDto = _searchPeopleApplicationService.Search();
             return Ok(peopleDto);
         }
-    }
 
-    public class PersonDto
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Email { get; set; }
+        [HttpPost, Route("")]
+        public IHttpActionResult Post(AddPersonHttpDto addPersonHttpDto)
+        {
+            var addPersonDto = MapAddPersonDto(addPersonHttpDto);
+            var personId = _addPersonApplicationService.Add(addPersonDto);
+            return Ok(personId);
+        }
+
+        private static AddPersonDto MapAddPersonDto(AddPersonHttpDto addPersonHttpDto)
+        {
+            return new AddPersonDto()
+            {
+                Name = addPersonHttpDto.Name,
+                Email = addPersonHttpDto.Email
+            };
+        }
     }
 }

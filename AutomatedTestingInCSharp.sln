@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutomatedTestingInCSharp.Se
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutomatedTestingInCSharp.WebApi", "AutomatedTestingInCSharp.WebApi\AutomatedTestingInCSharp.WebApi.csproj", "{C4D09723-DEC3-48F1-BC20-A897C304BFC9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutomatedTestingInCSharp.UnitTest", "AutomatedTestingInCSharp.UnitTest\AutomatedTestingInCSharp.UnitTest.csproj", "{2314F9C2-EB1F-4464-BF92-5C4E5D225CAC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{C4D09723-DEC3-48F1-BC20-A897C304BFC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C4D09723-DEC3-48F1-BC20-A897C304BFC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C4D09723-DEC3-48F1-BC20-A897C304BFC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2314F9C2-EB1F-4464-BF92-5C4E5D225CAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2314F9C2-EB1F-4464-BF92-5C4E5D225CAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2314F9C2-EB1F-4464-BF92-5C4E5D225CAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2314F9C2-EB1F-4464-BF92-5C4E5D225CAC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -54,5 +60,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{231873B3-D428-4CE1-8E40-164A6FF37898} = {89979C29-2D30-4CD1-938C-DBE2C001E63E}
 		{A81E3979-5304-4415-B63C-CA417974A1B2} = {89979C29-2D30-4CD1-938C-DBE2C001E63E}
+		{2314F9C2-EB1F-4464-BF92-5C4E5D225CAC} = {89979C29-2D30-4CD1-938C-DBE2C001E63E}
 	EndGlobalSection
 EndGlobal

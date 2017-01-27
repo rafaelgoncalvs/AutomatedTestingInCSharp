@@ -207,9 +207,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddPersonHttpDto.cs" />
     <Compile Include="PeopleController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SimpleInjectorControllerActivator.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
