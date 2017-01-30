@@ -40,8 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddTeamToUserApplicationService.cs" />
+    <Compile Include="AddTeamToUserDto.cs" />
     <Compile Include="AddUserApplicationService.cs" />
     <Compile Include="AddUserDto.cs" />
+    <Compile Include="TeamDto.cs" />
     <Compile Include="UserDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SearchUserApplicationService.cs" />

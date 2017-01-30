@@ -1,28 +1,21 @@
 using System.Collections.Generic;
 using System.Linq;
 using AutomatedTestingInCSharp.Domain;
+using AutomatedTestingInCSharp.Infra.Base;
 using NHibernate;
 using NHibernate.Linq;
 
 namespace AutomatedTestingInCSharp.Infra
 {
-    public class UserRepositoryNh : UserRepository
+    public class UserRepositoryNh : RepositoryNh<User>, UserRepository
     {
-        private readonly ISession _session;
-        
-        public UserRepositoryNh(ISession session)
+        public UserRepositoryNh(ISession session) : base(session)
         {
-            _session = session;
         }
 
         public IEnumerable<User> GetAll()
         {
             return _session.Query<User>().CacheMode(CacheMode.Normal).ToList();
-        }
-
-        public void Add(User user)
-        {
-            _session.Save(user);
         }
     }
 }

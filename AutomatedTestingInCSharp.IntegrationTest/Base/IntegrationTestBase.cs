@@ -1,4 +1,5 @@
-﻿using AutomatedTestingInCSharp.Application;
+﻿using System.Activities.Statements;
+using AutomatedTestingInCSharp.Application;
 using AutomatedTestingInCSharp.Infra;
 using NHibernate;
 using NHibernate.Cfg;
@@ -46,7 +47,7 @@ namespace AutomatedTestingInCSharp.IntegrationTest.Base
             _container.Register(() => Session);
             _container.RegisterAllFromAssemblyOf<UserRepositoryNh>(type => true);
             _container.RegisterAllFromAssemblyOf<AddUserApplicationService>(type => true);
-            _container.RegisterAllFromAssemblyOf<UserPersist>(type => true);
+            _container.Register<Persist>();
         }
 
         private void BeginTransaction()

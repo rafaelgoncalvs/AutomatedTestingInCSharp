@@ -25,8 +25,14 @@ namespace AutomatedTestingInCSharp.Application
             {
                 Email = user.Email,
                 Name = user.Name,
-                Id = user.Id
+                Id = user.Id,
+                Teams = user.Teams.Select(MapTeamDto)
             };
+        }
+
+        private static TeamDto MapTeamDto(Team team)
+        {
+            return new TeamDto() {Id = team.Id, Name = team.Name};
         }
     }
 }

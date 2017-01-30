@@ -52,6 +52,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base\RepositoryNh.cs" />
+    <Compile Include="TeamMap.cs" />
+    <Compile Include="TeamRepositoryNh.cs" />
     <Compile Include="UserRepositoryNh.cs" />
     <Compile Include="UserMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

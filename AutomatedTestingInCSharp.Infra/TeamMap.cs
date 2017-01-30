@@ -3,14 +3,12 @@ using FluentNHibernate.Mapping;
 
 namespace AutomatedTestingInCSharp.Infra
 {
-    public class UserMap : ClassMap<User>
+    public class TeamMap : ClassMap<Team>
     {
-        public UserMap()
+        public TeamMap()
         {
             Id(user => user.Id);
             Map(user => user.Name);
-            Map(user => user.Email);
-            HasMany(user => user.Teams).Cascade.AllDeleteOrphan();
         }
     }
 }

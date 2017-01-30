@@ -17,12 +17,12 @@ namespace AutomatedTestingInCSharp.WebApi
         }
 
         [HttpGet, Route("")]
-        public IHttpActionResult Get()
+        public IHttpActionResult GetAll()
         {
             var peopleDto = _searchUserApplicationService.Search();
             return Ok(peopleDto);
         }
-
+        
         [HttpPost, Route("")]
         public IHttpActionResult Post(AddUserHttpDto addUserHttpDto)
         {

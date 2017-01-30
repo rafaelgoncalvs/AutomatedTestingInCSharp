@@ -17,7 +17,7 @@ namespace AutomatedTestingInCSharp.IntegrationTest.Base
             _repository.Add(entity);
         }
 
-        protected virtual void AddDependentEntities(TEntity entidade)
+        protected virtual void AddDependentEntities(TEntity entity)
         {
         }
     }
