@@ -1,6 +1,6 @@
 ﻿namespace AutomatedTestingInCSharp.Application
 {
-    public class PersonDto
+    public class UserDto
     {
         public int Id { get; set; }
         public string Name { get; set; }

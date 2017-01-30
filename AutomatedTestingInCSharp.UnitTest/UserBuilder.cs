@@ -2,37 +2,37 @@ using AutomatedTestingInCSharp.Domain;
 
 namespace AutomatedTestingInCSharp.UnitTest
 {
-    public class PersonBuilder
+    public class UserBuilder
     {
         private string _name;
         private string _email;
 
-        public PersonBuilder()
+        public UserBuilder()
         {
-            _name = "Test Person";
+            _name = "User Test";
             _email = "test@test.com";
         }
 
-        public static PersonBuilder New()
+        public static UserBuilder New()
         {
-            return new PersonBuilder();
+            return new UserBuilder();
         }
 
-        public PersonBuilder WithName(string name)
+        public UserBuilder WithName(string name)
         {
             _name = name;
             return this;
         }
 
-        public PersonBuilder WithEmail(string email)
+        public UserBuilder WithEmail(string email)
         {
             _email = email;
             return this;
         }
 
-        public Person Build()
+        public User Build()
         {
-            return new Person(_name, _email);
+            return new User(_name, _email);
         }
     }
 }

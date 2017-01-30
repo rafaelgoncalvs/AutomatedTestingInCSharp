@@ -1,18 +1,17 @@
-﻿using System.Collections.Specialized;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 
 namespace AutomatedTestingInCSharp.UnitTest
 {
     [TestFixture]
-    public class PersonTest
+    public class UserTest
     {
         [Test]
-        public void Should_create_a_person()
+        public void Should_create_an_user()
         {
             const string name = "Rafael";
             const string email = "rafael@test.com";
             
-            var person = PersonBuilder.New().WithName(name).WithEmail(email).Build();
+            var person = UserBuilder.New().WithName(name).WithEmail(email).Build();
 
             Assert.AreEqual(name, person.Name);
             Assert.AreEqual(email, person.Email);

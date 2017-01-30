@@ -12,7 +12,7 @@ namespace AutomatedTestingInCSharp.IntegrationTest.Base
         {
             return Fluently.Configure()
                 .Database(SQLiteConfiguration.Standard.InMemory().ShowSql())
-                .Mappings(map => map.FluentMappings.AddFromAssemblyOf<PersonMap>())
+                .Mappings(map => map.FluentMappings.AddFromAssemblyOf<UserMap>())
                 .ExposeConfiguration(config => Configuration = config)
                 .BuildSessionFactory();
         }

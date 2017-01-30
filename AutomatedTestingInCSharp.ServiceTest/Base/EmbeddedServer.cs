@@ -28,18 +28,6 @@ namespace AutomatedTestingInCSharp.ServiceTest.Base
                 config.MapHttpAttributeRoutes();
                 config.Services.Replace(typeof(IHttpControllerActivator), new SimpleInjectorControllerActivator(_controllers));
                 
-                /* TODO: Outra opcao de configuracao
-                 * using Autofac;
-                 * using Autofac.Integration.WebApi;
-                var containerBuilder = new ContainerBuilder();
-                containerBuilder.RegisterApiControllers(Assembly.GetAssembly(typeof (PeopleController)));
-                containerBuilder.RegisterWebApiFilterProvider(config);
-                var container = containerBuilder.Build();
-                config.DependencyResolver = new AutofacWebApiDependencyResolver(container);
-                app.UseAutofacMiddleware(container);
-                app.UseAutofacWebApi(config);
-                */
-
                 app.UseWebApi(config);
             };
 

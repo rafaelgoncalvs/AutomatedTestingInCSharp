@@ -44,10 +44,9 @@ namespace AutomatedTestingInCSharp.IntegrationTest.Base
         {
             _container = new Container();
             _container.Register(() => Session);
-            _container.RegisterAllFromAssemblyOf<PeopleRepositoryNh>(type => true);
-            _container.RegisterAllFromAssemblyOf<AddPersonApplicationService>(type => true);
-
-           
+            _container.RegisterAllFromAssemblyOf<UserRepositoryNh>(type => true);
+            _container.RegisterAllFromAssemblyOf<AddUserApplicationService>(type => true);
+            _container.RegisterAllFromAssemblyOf<UserPersist>(type => true);
         }
 
         private void BeginTransaction()

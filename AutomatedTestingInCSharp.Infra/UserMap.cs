@@ -3,9 +3,9 @@ using FluentNHibernate.Mapping;
 
 namespace AutomatedTestingInCSharp.Infra
 {
-    public class PersonMap : ClassMap<Person>
+    public class UserMap : ClassMap<User>
     {
-        public PersonMap()
+        public UserMap()
         {
             Id(x => x.Id);
             Map(x => x.Name);

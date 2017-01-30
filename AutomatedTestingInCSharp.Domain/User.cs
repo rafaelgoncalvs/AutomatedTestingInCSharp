@@ -1,14 +1,13 @@
 ﻿namespace AutomatedTestingInCSharp.Domain
 {
-    public class Person
+    public class User : Entity<User>
     {
-        public virtual int Id { get; protected set; }
         public virtual string Name { get; protected set; }
         public virtual string Email { get; protected set; }
 
-        protected Person() { }
+        protected User() { }
 
-        public Person(string name, string email)
+        public User(string name, string email)
         {
             Name = name;
             Email = email;

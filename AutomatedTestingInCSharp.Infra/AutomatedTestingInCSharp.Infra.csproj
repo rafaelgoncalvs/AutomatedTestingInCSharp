@@ -52,8 +52,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PeopleRepositoryNh.cs" />
-    <Compile Include="PersonMap.cs" />
+    <Compile Include="UserRepositoryNh.cs" />
+    <Compile Include="UserMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -6,23 +6,23 @@ using NHibernate.Linq;
 
 namespace AutomatedTestingInCSharp.Infra
 {
-    public class PeopleRepositoryNh : PeopleRepository
+    public class UserRepositoryNh : UserRepository
     {
         private readonly ISession _session;
         
-        public PeopleRepositoryNh(ISession session)
+        public UserRepositoryNh(ISession session)
         {
             _session = session;
         }
 
-        public IEnumerable<Person> GetAll()
+        public IEnumerable<User> GetAll()
         {
-            return _session.Query<Person>().CacheMode(CacheMode.Normal).ToList();
+            return _session.Query<User>().CacheMode(CacheMode.Normal).ToList();
         }
 
-        public void Add(Person person)
+        public void Add(User user)
         {
-            _session.Save(person);
+            _session.Save(user);
         }
     }
 }
