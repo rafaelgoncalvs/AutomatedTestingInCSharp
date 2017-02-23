@@ -207,8 +207,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddUserHttpDto.cs" />
-    <Compile Include="UserController.cs" />
+    <Compile Include="AddMemberInTheTeamHttpDto.cs" />
+    <Compile Include="TeamController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>

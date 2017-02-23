@@ -115,7 +115,7 @@
     <Compile Include="Base\EmbeddedServer.cs" />
     <Compile Include="Base\ServiceTestBase.cs" />
     <Compile Include="Base\SimpleInjectorControllerActivator.cs" />
-    <Compile Include="UserControllerTest.cs" />
+    <Compile Include="TeamControllerTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

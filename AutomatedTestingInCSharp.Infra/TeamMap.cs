@@ -7,8 +7,10 @@ namespace AutomatedTestingInCSharp.Infra
     {
         public TeamMap()
         {
-            Id(user => user.Id);
-            Map(user => user.Name);
+            Id(team => team.Id);
+            Map(team => team.Name).Not.Nullable();
+            HasMany(team => team.Members).Cascade.AllDeleteOrphan();
+            HasMany(team => team.Projects).Cascade.AllDeleteOrphan();
         }
     }
 }

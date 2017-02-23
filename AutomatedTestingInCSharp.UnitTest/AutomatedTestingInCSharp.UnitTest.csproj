@@ -49,9 +49,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base\Builder.cs" />
+    <Compile Include="ClientBuilder.cs" />
+    <Compile Include="ProjectBuilder.cs" />
     <Compile Include="TeamBuilder.cs" />
-    <Compile Include="UserBuilder.cs" />
-    <Compile Include="UserTest.cs" />
+    <Compile Include="MemberBuilder.cs" />
+    <Compile Include="TeamTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

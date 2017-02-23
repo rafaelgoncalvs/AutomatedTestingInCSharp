@@ -18,7 +18,7 @@ namespace AutomatedTestingInCSharp.IntegrationTest.Base
         [SetUp]
         public void SetUp()
         {
-            var sessionFactory = SessionFactoryBuilder.Gerar();
+            var sessionFactory = SessionFactoryBuilder.Build();
             Session = sessionFactory.OpenSession();
 
             var configuration = SessionFactoryBuilder.Configuration;
@@ -45,8 +45,8 @@ namespace AutomatedTestingInCSharp.IntegrationTest.Base
         {
             _container = new Container();
             _container.Register(() => Session);
-            _container.RegisterAllFromAssemblyOf<UserRepositoryNh>(type => true);
-            _container.RegisterAllFromAssemblyOf<AddUserApplicationService>(type => true);
+            _container.RegisterAllFromAssemblyOf<TeamRepositoryNh>(type => true);
+            _container.RegisterAllFromAssemblyOf<AddMemberInTheTeamApplicationService>(type => true);
             _container.Register<Persist>();
         }
 

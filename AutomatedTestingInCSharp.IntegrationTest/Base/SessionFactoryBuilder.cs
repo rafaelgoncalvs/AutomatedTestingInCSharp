@@ -8,11 +8,11 @@ namespace AutomatedTestingInCSharp.IntegrationTest.Base
 {
     public class SessionFactoryBuilder
     {
-        public static ISessionFactory Gerar()
+        public static ISessionFactory Build()
         {
             return Fluently.Configure()
                 .Database(SQLiteConfiguration.Standard.InMemory().ShowSql())
-                .Mappings(map => map.FluentMappings.AddFromAssemblyOf<UserMap>())
+                .Mappings(map => map.FluentMappings.AddFromAssemblyOf<TeamMap>())
                 .ExposeConfiguration(config => Configuration = config)
                 .BuildSessionFactory();
         }

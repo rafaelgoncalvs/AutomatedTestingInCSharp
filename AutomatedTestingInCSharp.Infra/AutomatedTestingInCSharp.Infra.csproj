@@ -53,10 +53,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base\RepositoryNh.cs" />
+    <Compile Include="ClientMap.cs" />
+    <Compile Include="ProjectMap.cs" />
+    <Compile Include="ClientRepositoryNh.cs" />
     <Compile Include="TeamMap.cs" />
+    <Compile Include="ProjectRepositoryNh.cs" />
     <Compile Include="TeamRepositoryNh.cs" />
-    <Compile Include="UserRepositoryNh.cs" />
-    <Compile Include="UserMap.cs" />
+    <Compile Include="MemberRepositoryNh.cs" />
+    <Compile Include="MemberMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
