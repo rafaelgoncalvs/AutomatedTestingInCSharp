@@ -84,6 +84,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddMemberInTheTeamApplicationServiceWithoutPersistTest.cs" />
     <Compile Include="AddMemberInTheTeamApplicationServiceTest.cs" />
     <Compile Include="Base\IntegrationTestBase.cs" />
     <Compile Include="Base\SessionFactoryBuilder.cs" />
