@@ -27,14 +27,18 @@ namespace AutomatedTestingInCSharp.IntegrationTest
         [Test]
         public void Should_add_a_member_in_team_and_persist_in_the_repository()
         {
+            //Arrange
             var teamExpected = TeamBuilder.New().Build();
             _teamPersist.Add(teamExpected);
             var newDeveloper = MemberBuilder.New().With(m => m.Role, Role.Developer).Build();
             _memberPersist.Add(newDeveloper);
-            var addMemberInTheTeamDto = new AddMemberInTheTeamDto() { TeamId = teamExpected.Id, MemberId = newDeveloper.Id };
+            var addMemberInTheTeamDto = new AddMemberInTheTeamDto() { TeamId = teamExpected.Id,
+                MemberId = newDeveloper.Id };
 
+            //Action
             _addMemberInTheTeam.Add(addMemberInTheTeamDto);
 
+            //Assert
             var team = _teamRepository.Get(addMemberInTheTeamDto.TeamId);
             Assert.AreEqual(teamExpected.Id, team.Id);
             Assert.IsTrue(team.Members.Any(m => m.Id == newDeveloper.Id));

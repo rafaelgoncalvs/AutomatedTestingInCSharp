@@ -41,7 +41,8 @@ namespace AutomatedTestingInCSharp.IntegrationTest
             _teamRepository.Add(teamExpected);
             var newDeveloper = MemberBuilder.New().With(m => m.Role, Role.Developer).Build();
             _memberRepository.Add(newDeveloper);
-            var addMemberInTheTeamDto = new AddMemberInTheTeamDto() { TeamId = teamExpected.Id, MemberId = newDeveloper.Id };
+            var addMemberInTheTeamDto = new AddMemberInTheTeamDto() { TeamId = teamExpected.Id,
+                MemberId = newDeveloper.Id };
 
             //Action
             _addMemberInTheTeam.Add(addMemberInTheTeamDto);
